@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+
+@import url('https//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+*{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+.card span {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 250px;
+    display: block;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+
+    transform-origin: 125px 0;
+    transform: rotate(calc(90deg * var(--i)));
+
+    filter:blur(80px);
+    opacity: 0.78;
+}
+
+.card span:nth-child(1){
+    background:rgb(206, 29, 29)
+}
+.card span:nth-child(2){
+    background:rgb(206, 203, 29)
+}
+.card span:nth-child(3){
+    background:rgb(29, 135, 206)
+}
+.card span:nth-child(4){
+    background:rgb(171, 29, 206)
+}
+
+.card .glass {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    background: rgba(255, 255, 255,0.5);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.card .glass::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(345deg);
+}
+.card .glass h2 {
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255,0.5);
+    
+}
+
+
+</style>
+<body>
+    
+    <div class="card">
+        <span ></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+
+        <div class="glass">
+            <h2>Zeus sf
+                <br>
+                
+            </h2>
+        </div>
+    </div>
+
+
+  
+
+
+</body>
+</html>
